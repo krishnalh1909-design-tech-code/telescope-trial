@@ -865,8 +865,7 @@ form button:hover {
   .page2-tag {
     font-size: 12.5px;
     top: 75%;
-    left: 45%;
-    transform: translate(-50%, -50%);
+    left: 47%;
   }
 }
 
@@ -1003,10 +1002,11 @@ form button:hover {
 /* ----------------------------------------- */
 
 .page2 {
-  height: 100vh;
+  height: 101vh;
   width: 100%;
+  background-color: #fff;
   position: absolute;
-  bottom: -100%;
+  bottom: -101%;
   left: 0;
   z-index: 30;
   display: flex;
@@ -1061,9 +1061,51 @@ form button:hover {
 @media (max-width: 600px) {
   .page2-part1 {
     height: 33vh;
+    padding-top: 20px;
   }
 
   .page2-part2 {
     height: 67vh;
+  }
+}
+
+/* -------------------------------- */
+
+.slider1 {
+  height: 75vh;
+  width: 100%;
+  padding: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.slider1-img {
+  height: 70%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider1-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  .slider1 {
+    height: 55vh;
+    width: 300px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .slider1 {
+    height: 60vh;
+    width: 350px;
+    padding: 10px;
   }
 }

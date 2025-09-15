@@ -492,12 +492,11 @@ updateSlide();
 
 // -----------------------------------------------------------
 
-
 const page2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
     start: "0.1%",
-    end: "150%",
+    end: "100%",
     scrub: 2,
     pin: true,
   },
@@ -507,4 +506,72 @@ page2.to(".page2", {
   bottom: "0%",
   left: "0%",
   ease: "sine.inOut",
-})
+});
+
+const heading = document.getElementById("animated-heading");
+const text = heading.textContent;
+heading.innerHTML = "";
+
+text.split("").forEach((char) => {
+  const span = document.createElement("span");
+  span.className = "letter";
+  span.textContent = char;
+  heading.appendChild(span);
+});
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".main",
+      start: "1%",
+      end: "100%",
+      scrub: 1,
+      pin: true,
+      // markers: true,
+    },
+  })
+  .to(".letter", {
+    color: "black",
+    stagger: 0.07,
+    ease: "power1.inOut",
+  });
+
+// --------------------------------------
+
+let size;
+
+function createTimeline() {
+  if (size) {
+    size.kill(); // kill existing timeline to prevent stacking
+  }
+
+  size = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".main",
+      start: "0.3%",
+      end: "100%",
+      scrub: 1,
+      pin: true,
+    },
+  });
+
+  if (window.innerWidth > 1000) {
+    size.fromTo(
+      ".page2-part2",
+      { top: "80%" },
+      {
+        top: "-100%",
+        ease: "sine.inOut",
+      }
+    );
+  } else {
+    size.fromTo(
+      ".page2-part2",
+      { right: "-110%" },
+      {
+        right: "140%",
+        ease: "sine.inOut",
+      }
+    );
+  }
+}
