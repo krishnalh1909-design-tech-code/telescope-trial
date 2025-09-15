@@ -212,7 +212,7 @@ body.loaded #loader {
 
 /* ----------------------------------------------------- */
 
-.shadow {
+/* .shadow {
   position: fixed;
   width: 100%;
   top: 0;
@@ -221,7 +221,7 @@ body.loaded #loader {
   height: 100vh;
   opacity: 0;
   background-color: rgb(207, 205, 199);
-}
+} */
 
 .signin-container {
   height: 0vh;
@@ -497,108 +497,30 @@ form button:hover {
   right: -3%;
 }
 
-/* --------------------------------------------------------- */
-
-/* MEDIA QUERIES FOR .page1-div1 - .page1-div12 */
-
-/* Tablets (landscape and portrait) */
-/* @media (max-width: 1000px) {
-  .page1-div1 {
-    height: 110px;
-    width: 150px;
-    top: 18%;
-    left: 25%;
-  }
-  .page1-div2 {
-    height: 170px;
-    width: 190px;
-    top: 4%;
-    left: 28%;
-  }
-  .page1-div3 {
-    height: 150px;
-    width: 170px;
-    bottom: 12%;
-    left: 10%;
-  }
-  .page1-div4 {
-    height: 70px;
-    width: 100px;
-    top: 3%;
-    right: 3%;
-  }
-  .page1-div5 {
-    height: 230px;
-    width: 210px;
-    top: 28%;
-    right: 3%;
-  }
-  .page1-div6 {
-    height: 180px;
-    width: 240px;
-    bottom: 4%;
-    right: 10%;
-  }
-  .page1-div7 {
-    height: 130px;
-    width: 120px;
-    top: 10%;
-    right: 25%;
-  }
-  .page1-div8 {
-    height: 80px;
-    width: 90px;
-    bottom: 18%;
-    left: 20%;
-  }
-  .page1-div9 {
-    height: 75px;
-    width: 85px;
-    bottom: 45%;
-    left: 5%;
-  }
-  .page1-div10 {
-    height: 115px;
-    width: 160px;
-    bottom: 18%;
-    left: 50%;
-  }
-  .page1-div11 {
-    height: 145px;
-    width: 160px;
-    top: 20%;
-    left: 0%;
-  }
-  .page1-div12 {
-    height: 80px;
-    width: 110px;
-    top: 58%;
-    right: 0%;
-  }
-} */
 
 /* ---------------------------------------------------------- */
 
-/* Mobile Devices */
 @media (max-width: 1000px) {
   .page1-div1 {
     height: 90px;
     width: 120px;
-    top: 15%;
-    left: 20%;
-  }
-  .page1-div2 {
-    height: 140px;
-    width: 160px;
     top: 3%;
-    left: 22%;
+    left: 12%;
   }
-  .page1-div3 {
-    height: 120px;
-    width: 140px;
-    bottom: 10%;
-    left: 8%;
-  }
+
+      .page1-div2 {
+        height: 140px;
+        width: 160px;
+        top: 3%;
+        left: 34%;
+    }
+
+      .page1-div3 {
+        height: 107px;
+        width: 140px;
+        bottom: 10%;
+        left: 3%;
+    }
   .page1-div4 {
     height: 60px;
     width: 80px;
@@ -611,12 +533,12 @@ form button:hover {
     top: 26%;
     right: 2%;
   }
-  .page1-div6 {
-    height: 150px;
-    width: 200px;
-    bottom: 3%;
-    right: 8%;
-  }
+      .page1-div6 {
+        height: 103px;
+        width: 156px;
+        bottom: 14%;
+        right: 5%;
+    }
   .page1-div7 {
     height: 110px;
     width: 100px;
@@ -626,20 +548,20 @@ form button:hover {
   .page1-div8 {
     height: 70px;
     width: 80px;
-    bottom: 25%;
+    bottom: 30%;
     left: 15%;
   }
   .page1-div9 {
     height: 60px;
     width: 70px;
-    bottom: 40%;
+    bottom: 45%;
     left: 4%;
   }
   .page1-div10 {
     height: 100px;
     width: 130px;
     bottom: 18%;
-    left: 45%;
+    left: 40%;
   }
   .page1-div11 {
     height: 120px;
@@ -671,7 +593,7 @@ form button:hover {
 }
 
 /* Small Mobile Phones */
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .line1 {
     top: 45%;
     left: 50%;
