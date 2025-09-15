@@ -32,7 +32,7 @@ gsap.ticker.add((time) => {
 
 gsap.ticker.lagSmoothing(0);
 
-const signinBtn = document.querySelector(".nav3 h1");
+const signinBtn = document.querySelector(".nav2 h1");
 const signinCloseBtn = document.querySelector(".signin-close-btn");
 
 signinBtn.addEventListener("click", () => {

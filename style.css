@@ -328,7 +328,6 @@ form button:hover {
 .main {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   z-index: 95;
 }
 /* -------------------------------------------------- */
@@ -382,6 +381,39 @@ form button:hover {
 }
 
 /* ---------------------------------------------- */
+.page1-div1 img,
+.page1-div2 img,
+.page1-div3 img,
+.page1-div4 img,
+.page1-div5 img,
+.page1-div6 img,
+.page1-div7 img,
+.page1-div8 img,
+.page1-div9 img,
+.page1-div10 img,
+.page1-div11 img,
+.page1-div12 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page1 .box {
+  padding: 0.2vw;
+  overflow: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+.page1 .box img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: center;
+}
+
+/* --------------------------------------------------- */
 
 .page1-div1 {
   height: 135px;
@@ -473,7 +505,7 @@ form button:hover {
 /* MEDIA QUERIES FOR .page1-div1 - .page1-div12 */
 
 /* Tablets (landscape and portrait) */
-@media (max-width: 1224px) {
+@media (max-width: 1000px) {
   .page1-div1 {
     height: 110px;
     width: 150px;
@@ -550,37 +582,6 @@ form button:hover {
 
 /* ---------------------------------------------------------- */
 
-.page1-div1 img,
-.page1-div2 img,
-.page1-div3 img,
-.page1-div4 img,
-.page1-div5 img,
-.page1-div6 img,
-.page1-div7 img,
-.page1-div8 img,
-.page1-div9 img,
-.page1-div10 img,
-.page1-div11 img,
-.page1-div12 img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.page1 .box {
-  padding: 0.2vw;
-  overflow: hidden;
-  position: absolute;
-  cursor: pointer;
-}
-
-.page1 .box img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  object-position: center;
-}
 
 /* Mobile Devices */
 @media (max-width: 768px) {
