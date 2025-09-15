@@ -58,16 +58,16 @@ body.loaded #loader {
 
 /* ---------------------------------------------------- */
 .telescope {
-  height: 100px;
-  width: 700px;
-  background: white;
-  position: fixed;
-  top: 92%;
-  left: 50%;
-  z-index: 100;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  border-radius: 10px;
+    height: 61px;
+    width: 545px;
+    background: white;
+    position: fixed;
+    top: 92%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .telescope-nav {
@@ -106,7 +106,7 @@ body.loaded #loader {
 
 .nav2 h1 {
   width: max-content;
-  font-size: 20px;
+  font-size: 15.5px;
   font-family: Beauty2;
   cursor: pointer;
 }
@@ -149,10 +149,10 @@ body.loaded #loader {
 
 .telescope-heading {
   font-family: Beauty;
-  font-size: 1vw;
+  font-size: 14px;
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 24%;
   z-index: 100;
   transform: translate(-50%, -50%);
 }
@@ -166,9 +166,9 @@ body.loaded #loader {
 }
 
 @media (max-width: 1200px) {
-  .telescope-heading {
+  /* .telescope-heading {
     font-size: 20px;
-  }
+  } */
 
   .nav1 {
     width: 80%;
@@ -177,7 +177,7 @@ body.loaded #loader {
   }
 
   .nav1 h1,
-  .nav3 h1 {
+  .nav2 h1 {
     font-size: 20px;
   }
 }
@@ -430,9 +430,9 @@ form button:hover {
 
 .page1-div3 {
   height: 171px;
-  width: 197px;
-  bottom: 10%;
-  left: 15%;
+  width: 160px;
+  bottom: 12%;
+  left: 7%;
 }
 
 .page1-div4 {
@@ -449,10 +449,10 @@ form button:hover {
   right: 7%;
 }
 .page1-div6 {
-  height: 208px;
-  width: 291px;
-  bottom: 5%;
-  right: 15%;
+    height: 121px;
+    width: 197px;
+    bottom: 10%;
+    right: 13%;
 }
 
 .page1-div7 {
@@ -463,30 +463,30 @@ form button:hover {
 }
 
 .page1-div8 {
-  height: 96px;
-  width: 111px;
-  bottom: 20%;
-  left: 27%;
+    height: 96px;
+    width: 111px;
+    bottom: 19%;
+    left: 27%;
 }
 
 .page1-div9 {
   height: 100px;
   width: 115px;
-  bottom: 50%;
+  bottom: 43%;
   left: 7%;
 }
 
 .page1-div10 {
-  height: 136px;
-  width: 191px;
-  bottom: 19%;
-  left: 55%;
+    height: 128px;
+    width: 180px;
+    bottom: 19%;
+    left: 46%;
 }
 
 .page1-div11 {
-  height: 176px;
-  width: 191px;
-  top: 22%;
+  height: 128px;
+  width: 144px;
+  top: 16%;
   left: -3%;
 }
 
@@ -502,7 +502,7 @@ form button:hover {
 /* MEDIA QUERIES FOR .page1-div1 - .page1-div12 */
 
 /* Tablets (landscape and portrait) */
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .page1-div1 {
     height: 110px;
     width: 150px;
@@ -575,12 +575,12 @@ form button:hover {
     top: 58%;
     right: 0%;
   }
-}
+} */
 
 /* ---------------------------------------------------------- */
 
 /* Mobile Devices */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .page1-div1 {
     height: 90px;
     width: 120px;
