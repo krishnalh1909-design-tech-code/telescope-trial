@@ -1,20 +1,37 @@
+
+(function() {
+  // Check if width is inside the 600-1024 range (inclusive)
+  function isInRange(width) {
+    return width >= 600 && width <= 1024;
+  }
+
+  let wasInRange = isInRange(window.innerWidth);
+
+  window.addEventListener('resize', () => {
+    const nowInRange = isInRange(window.innerWidth);
+    if (nowInRange !== wasInRange) {
+      // Window crossed the 600-1024 boundary, reload page
+      location.reload();
+    }
+    wasInRange = nowInRange;
+  });
+})();
+
+// ---------------------------------------------
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+// ----------------------------------------------
 
-
- window.addEventListener('load', () => {
-      // Hide loader after page fully loads
-      document.body.classList.add('loaded');
-      // Show your actual content
-      document.getElementById('content').style.display = 'block';
-      // Optional: remove loader from DOM after fade out transition
-      setTimeout(() => {
-        const loader = document.getElementById('loader');
-        if (loader) loader.style.display = 'none';
-      }, 2500);
-    });
-
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      loader.style.display = 'none';
+    }
+  }, 3000); // 3 seconds
+});
+// ---------------------------------------------------
 
 // ✅ Lenis Setup (Smooth Scroll)
 const lenis = new Lenis({
@@ -71,6 +88,19 @@ signinCloseBtn.addEventListener("click", () => {
     zIndex: 90,
   });
 });
+
+setTimeout(() => {
+  const main = document.querySelector(".main")
+  main.style.opacity=1;
+
+  gsap.from(".line1, .line2, .line3", {
+  opacity: 0,
+  y: 70,
+  duration: 3,
+  stagger: 0.6,
+  ease: "power2.out",
+});
+}, 3000);
 
 const boxM = document.querySelectorAll(".box");
 
@@ -280,17 +310,11 @@ setTimeout(() => {
       0
     );
   });
-}, 800); // 2500ms delay = 2.5 seconds
+}, 3000); // 2500ms delay = 2.5 seconds
 
 
 // ✅ Lines Fade & Slide
-gsap.from(".line1, .line2, .line3", {
-  opacity: 0,
-  y: 70,
-  duration: 3,
-  stagger: 0.6,
-  ease: "power2.out",
-});
+
 
 // ✅ Line1 Fade Out
 gsap

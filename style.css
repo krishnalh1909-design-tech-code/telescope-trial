@@ -22,6 +22,8 @@ body {
   overflow-x: hidden;
 }
 
+/* ---------------------------------------------------- */
+
 #loader {
   position: fixed;
   top: 0;
@@ -51,12 +53,8 @@ body {
   }
 }
 
-body.loaded #loader {
-  opacity: 0;
-  pointer-events: none;
-}
+/* ------------------------------------------------------ */
 
-/* ---------------------------------------------------- */
 .telescope {
   height: 61px;
   width: 545px;
@@ -327,7 +325,9 @@ form button:hover {
   height: 100%;
   width: 100%;
   z-index: 95;
+  opacity: 0;
 }
+
 /* -------------------------------------------------- */
 
 .page1 {
@@ -658,8 +658,6 @@ form button:hover {
 
 /* ------------------------------------------------------------------- */
 
-
-
 .main-div {
   height: 103vh;
   width: 100%;
@@ -792,8 +790,6 @@ form button:hover {
     transform: translate(-50%, -50%);
   }
 }
-
-
 
 .main-img {
   position: absolute;
@@ -972,7 +968,6 @@ form button:hover {
     opacity: 0;
   }
 }
-
 
 .gallery {
   height: 100vh;
