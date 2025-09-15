@@ -507,10 +507,10 @@ form button:hover {
   }
 
   .page1-div2 {
-    height: 140px;
-    width: 160px;
+    height: 129px;
+    width: 139px;
     top: 3%;
-    left: 34%;
+    left: 37%;
   }
 
   .page1-div3 {
@@ -526,9 +526,9 @@ form button:hover {
     right: 2%;
   }
   .page1-div5 {
-    height: 200px;
-    width: 180px;
-    top: 26%;
+    height: 130px;
+    width: 115px;
+    top: 28%;
     right: 2%;
   }
   .page1-div6 {
@@ -692,12 +692,12 @@ form button:hover {
 
 /* Positioning for larger screens */
 .right-arrow {
-  bottom: 18%;
+  bottom: 15%;
   right: 40%;
 }
 
 .left-arrow {
-  bottom: 18%;
+  bottom: 15%;
   left: 40%;
 }
 
@@ -719,7 +719,7 @@ form button:hover {
   }
 
   .right-arrow {
-    right: 40%;
+    right: 35%;
     transform: translateX(-50%);
   }
 
@@ -866,7 +866,7 @@ form button:hover {
     font-size: 12.5px;
     top: 75%;
     left: 45%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -906,7 +906,6 @@ form button:hover {
     opacity: 0;
   }
 }
-
 
 .gallery {
   height: 100vh;
@@ -998,5 +997,73 @@ form button:hover {
 
   .gallery-box2 {
     font-size: 12px;
+  }
+}
+
+/* ----------------------------------------- */
+
+.page2 {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  font-weight: 100;
+  overflow: hidden;
+}
+
+.page2-part1 {
+  height: 57vh;
+  width: 70vw;
+  font-size: 1.85vw;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.page2-part1 h1 {
+  color: rgb(193, 191, 191);
+  font-weight: 100;
+}
+
+.page2-part2 {
+  height: 170vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .page2 {
+    flex-direction: column;
+  }
+
+  .page2-part1 {
+    height: 45vh;
+    width: 100vw;
+  }
+
+  .page2-part1 h1 {
+    font-size: 4.5vw;
+  }
+
+  .page2-part2 {
+    height: 55vh;
+    width: 170vw;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 600px) {
+  .page2-part1 {
+    height: 33vh;
+  }
+
+  .page2-part2 {
+    height: 67vh;
   }
 }

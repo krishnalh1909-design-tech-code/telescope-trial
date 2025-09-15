@@ -1,5 +1,4 @@
-
-(function() {
+(function () {
   // Check if width is inside the 600-1024 range (inclusive)
   function isInRange(width) {
     return width >= 200 && width <= 600;
@@ -7,7 +6,7 @@
 
   let wasInRange = isInRange(window.innerWidth);
 
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     const nowInRange = isInRange(window.innerWidth);
     if (nowInRange !== wasInRange) {
       // Window crossed the 600-1024 boundary, reload page
@@ -23,11 +22,11 @@ window.onbeforeunload = function () {
 };
 // ----------------------------------------------
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   setTimeout(() => {
-    const loader = document.getElementById('loader');
+    const loader = document.getElementById("loader");
     if (loader) {
-      loader.style.display = 'none';
+      loader.style.display = "none";
     }
   }, 3000); // 3 seconds
 });
@@ -39,7 +38,6 @@ const lenis = new Lenis({
   easing: (t) => 1 - Math.pow(1 - t, 3), // cubic ease-out
   smooth: true,
 });
-
 
 lenis.on("scroll", ScrollTrigger.update);
 
@@ -90,16 +88,16 @@ signinCloseBtn.addEventListener("click", () => {
 });
 
 setTimeout(() => {
-  const main = document.querySelector(".main")
-  main.style.opacity=1;
+  const main = document.querySelector(".main");
+  main.style.opacity = 1;
 
   gsap.from(".line1, .line2, .line3", {
-  opacity: 0,
-  y: 70,
-  duration: 3,
-  stagger: 0.6,
-  ease: "power2.out",
-});
+    opacity: 0,
+    y: 70,
+    duration: 3,
+    stagger: 0.6,
+    ease: "power2.out",
+  });
 }, 3000);
 
 const boxM = document.querySelectorAll(".box");
@@ -312,9 +310,7 @@ setTimeout(() => {
   });
 }, 3000); // 2500ms delay = 2.5 seconds
 
-
 // ✅ Lines Fade & Slide
-
 
 // ✅ Line1 Fade Out
 gsap
@@ -333,7 +329,7 @@ const tl1 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
     start: "top top",
-    end: "250%",
+    end: "200%",
     scrub: 1,
     pin: true,
   },
@@ -495,3 +491,20 @@ left.addEventListener("click", () => {
 updateSlide();
 
 // -----------------------------------------------------------
+
+
+const page2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main",
+    start: "0.1%",
+    end: "150%",
+    scrub: 2,
+    pin: true,
+  },
+});
+
+page2.to(".page2", {
+  bottom: "0%",
+  left: "0%",
+  ease: "sine.inOut",
+})
