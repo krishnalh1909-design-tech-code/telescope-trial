@@ -22,41 +22,39 @@ body {
   overflow-x: hidden;
 }
 
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
 
- #loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    }
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-    .spinner {
-      width: 60px;
-      height: 60px;
-      border: 6px solid #ccc;
-      border-top-color: #3498db;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-     body.loaded #loader {
-      opacity: 0;
-      pointer-events: none;
-    }
+body.loaded #loader {
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* ---------------------------------------------------- */
 .telescope {
@@ -416,18 +414,18 @@ form button:hover {
 /* --------------------------------------------------- */
 
 .page1-div1 {
-  height: 135px;
-  width: 185px;
-  top: 20%;
-  left: 30%;
+  height: 122px;
+  width: 165px;
+  top: 16%;
+  left: 24%;
   z-index: 5;
 }
 
 .page1-div2 {
-  height: 203px;
-  width: 223px;
-  top: 5%;
-  left: 35%;
+  height: 159px;
+  width: 166px;
+  top: 2%;
+  left: 38%;
 }
 
 .page1-div3 {
@@ -445,12 +443,11 @@ form button:hover {
 }
 
 .page1-div5 {
-  height: 285px;
-  width: 256px;
-  top: 30%;
-  right: 5%;
+  height: 164px;
+  width: 159px;
+  top: 32%;
+  right: 7%;
 }
-
 .page1-div6 {
   height: 208px;
   width: 291px;
@@ -459,10 +456,10 @@ form button:hover {
 }
 
 .page1-div7 {
-  height: 155px;
-  width: 140px;
-  top: 12%;
-  right: 30%;
+  height: 111px;
+  width: 103px;
+  top: 16%;
+  right: 27%;
 }
 
 .page1-div8 {
@@ -581,7 +578,6 @@ form button:hover {
 }
 
 /* ---------------------------------------------------------- */
-
 
 /* Mobile Devices */
 @media (max-width: 768px) {
