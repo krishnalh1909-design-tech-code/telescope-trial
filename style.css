@@ -676,8 +676,8 @@ form button:hover {
 .right-arrow,
 .left-arrow {
   z-index: 99999;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background-color: #e3f794;
   position: absolute;
@@ -693,12 +693,12 @@ form button:hover {
 /* Positioning for larger screens */
 .right-arrow {
   bottom: 18%;
-  right: 45%;
+  right: 40%;
 }
 
 .left-arrow {
   bottom: 18%;
-  left: 45%;
+  left: 40%;
 }
 
 /* Image inside buttons */
@@ -729,7 +729,6 @@ form button:hover {
   }
 }
 
-
 @media (max-width: 600px) {
   .right-arrow,
   .left-arrow {
@@ -741,7 +740,7 @@ form button:hover {
 
   .right-arrow {
     bottom: 12.5%;
-    right: 40%;
+    right: 30%;
     transform: translate(-50%, -50%);
   }
 
@@ -821,11 +820,9 @@ form button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-
   color: white;
   z-index: 10000;
   text-align: center;
@@ -857,6 +854,24 @@ form button:hover {
   width: 100%;
 }
 
+@media (max-width: 800px) {
+  .page2-tag {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page2-tag {
+    font-size: 12.5px;
+    top: 75%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+/* --------------------------------------------- */
+
 /* Shared styles */
 .tag2-line1,
 .tag2-line2 {
@@ -885,50 +900,13 @@ form button:hover {
 }
 
 /* Small screens: transform to / \ (V shape) */
-@media (max-width: 768px) {
-  .tag2-line1 {
-    opacity: 0;
-  }
-
-  .tag2-line2 {
-    opacity: 0;
-  }
-}
-
 @media (max-width: 800px) {
-  .page2-tag {
-    font-size: 15px;
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .tag2-line1,
-  .tag2-line2 {
-    opacity: 0;
-  }
-
-  .page2-tag {
-    font-size: 12.5px;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@media (max-width: 400px) {
-  .page2-tag {
-    font-size: 12.5px;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .tag2-line1,
   .tag2-line2 {
     opacity: 0;
   }
 }
+
 
 .gallery {
   height: 100vh;
