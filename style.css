@@ -331,7 +331,7 @@ form button:hover {
 /* -------------------------------------------------- */
 
 .page1 {
-  height: 101vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -659,7 +659,7 @@ form button:hover {
 /* ------------------------------------------------------------------- */
 
 .main-div {
-  height: 103vh;
+  height: 101vh;
   width: 100%;
   scale: 0;
   z-index: 20;
@@ -714,8 +714,8 @@ form button:hover {
 @media (max-width: 1500px) {
   .right-arrow,
   .left-arrow {
-    height: 55px;
-    width: 55px;
+    height: 45px;
+    width: 45px;
   }
 
   .right-arrow {
@@ -724,52 +724,13 @@ form button:hover {
   }
 
   .left-arrow {
-    left: 45%;
+    left: 40%;
     transform: translateX(-50%);
   }
 }
 
-@media (max-width: 768px) {
-  .right-arrow,
-  .left-arrow {
-    height: 40px;
-    width: 40px;
-    font-size: 18px;
-    padding: 8px;
-  }
 
-  .right-arrow {
-    left: 60%;
-  }
-
-  .left-arrow {
-    left: 40%;
-  }
-}
-
-@media (max-width: 480px) {
-  .right-arrow,
-  .left-arrow {
-    height: 35px;
-    width: 35px;
-    font-size: 16px;
-    padding: 6px;
-  }
-
-  .right-arrow {
-    bottom: 12.5%;
-    right: 35%;
-    transform: translate(-50%, -50%);
-  }
-
-  .left-arrow {
-    bottom: 12.5%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .right-arrow,
   .left-arrow {
     height: 30px;
@@ -780,13 +741,13 @@ form button:hover {
 
   .right-arrow {
     bottom: 12.5%;
-    right: 45%;
+    right: 40%;
     transform: translate(-50%, -50%);
   }
 
   .left-arrow {
     bottom: 12.5%;
-    left: 45%;
+    left: 40%;
     transform: translate(-50%, -50%);
   }
 }

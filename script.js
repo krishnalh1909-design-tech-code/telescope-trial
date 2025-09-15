@@ -2,7 +2,7 @@
 (function() {
   // Check if width is inside the 600-1024 range (inclusive)
   function isInRange(width) {
-    return width >= 600 && width <= 1024;
+    return width >= 200 && width <= 600;
   }
 
   let wasInRange = isInRange(window.innerWidth);
