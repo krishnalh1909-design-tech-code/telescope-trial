@@ -283,191 +283,191 @@ setTimeout(() => {
 }, 800); // 2500ms delay = 2.5 seconds
 
 
-// ✅ Lines Fade & Slide
-gsap.from(".line1, .line2, .line3", {
-  opacity: 0,
-  y: 70,
-  duration: 3,
-  stagger: 0.6,
-  ease: "power2.out",
-});
+// // ✅ Lines Fade & Slide
+// gsap.from(".line1, .line2, .line3", {
+//   opacity: 0,
+//   y: 70,
+//   duration: 3,
+//   stagger: 0.6,
+//   ease: "power2.out",
+// });
 
-// ✅ Line1 Fade Out
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".main",
-      start: "top top",
-      end: "10%",
-      scrub: 0.5,
-    },
-  })
-  .to(".line1", { opacity: 0, duration: 1 });
+// // ✅ Line1 Fade Out
+// gsap
+//   .timeline({
+//     scrollTrigger: {
+//       trigger: ".main",
+//       start: "top top",
+//       end: "10%",
+//       scrub: 0.5,
+//     },
+//   })
+//   .to(".line1", { opacity: 0, duration: 1 });
 
-// ✅ Main Image & Text Scaling Timeline
-const tl1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".main",
-    start: "top top",
-    end: "250%",
-    scrub: 1,
-    pin: true,
-  },
-});
+// // ✅ Main Image & Text Scaling Timeline
+// const tl1 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".main",
+//     start: "top top",
+//     end: "250%",
+//     scrub: 1,
+//     pin: true,
+//   },
+// });
 
-tl1
-  .to(
-    ".line2",
-    {
-      left: "-20%",
-      ease: "power1.inOut",
-    },
-    "a"
-  )
-  .to(
-    ".line3",
-    {
-      right: "-30%",
-      ease: "power1.inOut",
-    },
-    "a"
-  )
-  .to(
-    ".main-div",
-    {
-      scale: 1,
-      ease: "power2.inOut",
-    },
-    "a"
-  )
-  .to(
-    [
-      ".img1",
-      ".img2",
-      ".img3",
-      ".img4",
-      ".img5",
-      ".img6",
-      ".main-div-heading h1",
-    ],
-    {
-      scale: 1,
-      opacity: (i, target) =>
-        target.matches(".main-div-heading h1") ? 1 : undefined,
-      stagger: (i, target) =>
-        target.matches(".main-div-heading h1") ? 0.02 : undefined,
-      stagger: 0.025,
-    },
-    "a"
-  )
-  .to(".main-div-heading", {
-    opacity: 0,
-  })
-  .from(
-    ".page2-tag h1",
-    {
-      opacity: 0,
-    },
-    "a+=1.5"
-  )
+// tl1
+//   .to(
+//     ".line2",
+//     {
+//       left: "-20%",
+//       ease: "power1.inOut",
+//     },
+//     "a"
+//   )
+//   .to(
+//     ".line3",
+//     {
+//       right: "-30%",
+//       ease: "power1.inOut",
+//     },
+//     "a"
+//   )
+//   .to(
+//     ".main-div",
+//     {
+//       scale: 1,
+//       ease: "power2.inOut",
+//     },
+//     "a"
+//   )
+//   .to(
+//     [
+//       ".img1",
+//       ".img2",
+//       ".img3",
+//       ".img4",
+//       ".img5",
+//       ".img6",
+//       ".main-div-heading h1",
+//     ],
+//     {
+//       scale: 1,
+//       opacity: (i, target) =>
+//         target.matches(".main-div-heading h1") ? 1 : undefined,
+//       stagger: (i, target) =>
+//         target.matches(".main-div-heading h1") ? 0.02 : undefined,
+//       stagger: 0.025,
+//     },
+//     "a"
+//   )
+//   .to(".main-div-heading", {
+//     opacity: 0,
+//   })
+//   .from(
+//     ".page2-tag h1",
+//     {
+//       opacity: 0,
+//     },
+//     "a+=1.5"
+//   )
 
-  .from(
-    ".tag2-line1,.tag2-line2",
-    {
-      opacity: 0,
-    },
-    "a+=1.5"
-  )
-  .from(".right-arrow,.left-arrow", {
-    scale: 0,
-  })
-  .to(".gallery", {
-    opacity: 1,
-  });
+//   .from(
+//     ".tag2-line1,.tag2-line2",
+//     {
+//       opacity: 0,
+//     },
+//     "a+=1.5"
+//   )
+//   .from(".right-arrow,.left-arrow", {
+//     scale: 0,
+//   })
+//   .to(".gallery", {
+//     opacity: 1,
+//   });
 
-// -------------------------------------------------
-let mainDiv = document.querySelector(".main-div");
-let right = document.querySelector(".right-arrow");
-let left = document.querySelector(".left-arrow");
+// // -------------------------------------------------
+// let mainDiv = document.querySelector(".main-div");
+// let right = document.querySelector(".right-arrow");
+// let left = document.querySelector(".left-arrow");
 
-let Name = document.querySelector(".page2-tag h1");
-let galleryBox2 = document.querySelector(".gallery-box2");
-let galleryBox1 = document.querySelector(".gallery-box1 h1");
-let index = 0; // Current slide index
+// let Name = document.querySelector(".page2-tag h1");
+// let galleryBox2 = document.querySelector(".gallery-box2");
+// let galleryBox1 = document.querySelector(".gallery-box1 h1");
+// let index = 0; // Current slide index
 
-// Data for each slide
-const slides = [
-  {
-    name: "Zarah Khan",
-    description:
-      "Co-Founder of STAN WORLDWIDE. Creative with 20+ years shaping brands at the intersection of culture, tech, art & design.",
-    text: "<h1>Food <br> Health <br> Music</h1>",
-    imgSrc: "/Images/zarah-back-Photoroom.webp",
-    bgColor: "#63594F",
-  },
-  {
-    name: "Carla Poirier",
-    description:
-      "Creative Director and Brand Strategist whose work sits at the intersection of cultural curation and identity-building.",
-    text: "<h1>Design <br> Fashion <br> Beauty</h1>",
-    imgSrc: "/Images/carla-back-Photoroom.webp",
-    bgColor: "#5589CE",
-  },
-  {
-    name: "Kristian Grove Møller",
-    description:
-      "Co-Founder of STAN WORLDWIDE. Creative with 20+ years shaping brands at the intersection of culture, tech, art & design.",
-    text: "<h1>Culture <br> Art <br> Design</h1>",
-    imgSrc: "/Images/kristian-back-Photoroom.webp",
-    bgColor: "#B0AB92",
-  },
-  {
-    name: "Hasan Khalid",
-    description:
-      "Anti-disciplinary artist and former Director of Creative Development for GQ magazine.",
-    text: "<h1>Travel <br> Food & Wine <br> Music</h1>",
-    imgSrc: "/Images/hasan-back-Photoroom.webp",
-    bgColor: "#95A7B5",
-  },
-];
+// // Data for each slide
+// const slides = [
+//   {
+//     name: "Zarah Khan",
+//     description:
+//       "Co-Founder of STAN WORLDWIDE. Creative with 20+ years shaping brands at the intersection of culture, tech, art & design.",
+//     text: "<h1>Food <br> Health <br> Music</h1>",
+//     imgSrc: "/Images/zarah-back-Photoroom.webp",
+//     bgColor: "#63594F",
+//   },
+//   {
+//     name: "Carla Poirier",
+//     description:
+//       "Creative Director and Brand Strategist whose work sits at the intersection of cultural curation and identity-building.",
+//     text: "<h1>Design <br> Fashion <br> Beauty</h1>",
+//     imgSrc: "/Images/carla-back-Photoroom.webp",
+//     bgColor: "#5589CE",
+//   },
+//   {
+//     name: "Kristian Grove Møller",
+//     description:
+//       "Co-Founder of STAN WORLDWIDE. Creative with 20+ years shaping brands at the intersection of culture, tech, art & design.",
+//     text: "<h1>Culture <br> Art <br> Design</h1>",
+//     imgSrc: "/Images/kristian-back-Photoroom.webp",
+//     bgColor: "#B0AB92",
+//   },
+//   {
+//     name: "Hasan Khalid",
+//     description:
+//       "Anti-disciplinary artist and former Director of Creative Development for GQ magazine.",
+//     text: "<h1>Travel <br> Food & Wine <br> Music</h1>",
+//     imgSrc: "/Images/hasan-back-Photoroom.webp",
+//     bgColor: "#95A7B5",
+//   },
+// ];
 
-// Function to update the slide
-function updateSlide() {
-  const images = document.querySelectorAll(
-    ".main-img, .img1, .img2, .img3, .img4, .img5, .img6"
-  );
+// // Function to update the slide
+// function updateSlide() {
+//   const images = document.querySelectorAll(
+//     ".main-img, .img1, .img2, .img3, .img4, .img5, .img6"
+//   );
 
-  const current = slides[index];
+//   const current = slides[index];
 
-  // Update content
-  galleryBox2.innerHTML = current.text;
-  galleryBox1.innerHTML = current.description;
-  Name.textContent = current.name;
-  images.forEach((img) => (img.src = current.imgSrc));
-  mainDiv.style.backgroundColor = current.bgColor;
+//   // Update content
+//   galleryBox2.innerHTML = current.text;
+//   galleryBox1.innerHTML = current.description;
+//   Name.textContent = current.name;
+//   images.forEach((img) => (img.src = current.imgSrc));
+//   mainDiv.style.backgroundColor = current.bgColor;
 
-  // GSAP animation
-  gsap.from(".page2-tag, .gallery-box1, .gallery-box2", {
-    y: 70,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-  });
-}
+//   // GSAP animation
+//   gsap.from(".page2-tag, .gallery-box1, .gallery-box2", {
+//     y: 70,
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power3.out",
+//   });
+// }
 
-// Right arrow (Next)
-right.addEventListener("click", () => {
-  index = (index + 1) % slides.length;
-  updateSlide();
-});
+// // Right arrow (Next)
+// right.addEventListener("click", () => {
+//   index = (index + 1) % slides.length;
+//   updateSlide();
+// });
 
-// Left arrow (Previous)
-left.addEventListener("click", () => {
-  index = (index - 1 + slides.length) % slides.length;
-  updateSlide();
-});
+// // Left arrow (Previous)
+// left.addEventListener("click", () => {
+//   index = (index - 1 + slides.length) % slides.length;
+//   updateSlide();
+// });
 
-// Initial load
-updateSlide();
+// // Initial load
+// updateSlide();
 
-// -----------------------------------------------------------
+// // -----------------------------------------------------------
