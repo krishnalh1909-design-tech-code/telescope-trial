@@ -589,21 +589,4 @@ window.addEventListener("resize", () => {
   }, 200); // adjust delay as needed
 });
 
-const shops = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".main",
-    start: "0.5%",
-    end: "100%",
-    scrub: 1,
-    pin: true,
-  },
-});
-
-shops
-  .to(
-    ".shops",
-    {
-      top: "0%",
-    },
-  )
 
