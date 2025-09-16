@@ -495,7 +495,7 @@ updateSlide();
 const page2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "0.1%",
+    start: "1%",
     end: "100%",
     scrub: 2,
     pin: true,
