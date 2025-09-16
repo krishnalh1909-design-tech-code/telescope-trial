@@ -491,23 +491,6 @@ left.addEventListener("click", () => {
 updateSlide();
 
 // -----------------------------------------------------------
-
-const page2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".main",
-    start: "0.1%",
-    end: "100%",
-    scrub: 2,
-    pin: true,
-  },
-});
-
-page2.to(".page2", {
-  bottom: "0%",
-  left: "0%",
-  ease: "sine.inOut",
-});
-
 const heading = document.getElementById("animated-heading");
 const text = heading.textContent;
 heading.innerHTML = "";
@@ -518,6 +501,25 @@ text.split("").forEach((char) => {
   span.textContent = char;
   heading.appendChild(span);
 });
+
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".main",
+      start: "0.1%",
+      end: "90%",
+      scrub: 0.8,
+      pin: true,
+    },
+  })
+  .to(".page2", {
+    bottom: "0%",
+    left: "0%",
+    ease: "sine.inOut",
+  });
+
+
 
 gsap
   .timeline({
@@ -535,6 +537,7 @@ gsap
     stagger: 0.07,
     ease: "power1.inOut",
   });
+
 
 // --------------------------------------
 
