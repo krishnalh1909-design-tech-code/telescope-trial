@@ -503,17 +503,18 @@ text.split("").forEach((char) => {
 });
 
 
-gsap
-  .timeline({
+let page2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".main",
-      start: "0.1%",
+      start: "0.2%",
       end: "90%",
       scrub: 0.8,
       pin: true,
     },
   })
-  .to(".page2", {
+
+
+  page2.to(".page2", {
     bottom: "0%",
     left: "0%",
     ease: "sine.inOut",
@@ -521,18 +522,18 @@ gsap
 
 
 
-gsap
-  .timeline({
+let letter = gsap .timeline({
     scrollTrigger: {
       trigger: ".main",
-      start: "0.2%",
+      start: "0.3%",
       end: "100%",
       scrub: 1,
       pin: true,
       // markers: true,
     },
   })
-  .to(".letter", {
+
+  letter.to(".letter", {
     color: "black",
     stagger: 0.07,
     ease: "power1.inOut",
@@ -551,7 +552,7 @@ function createTimeline() {
   size = gsap.timeline({
     scrollTrigger: {
       trigger: ".main",
-      start: "0.3%",
+      start: "0.4%",
       end: "100%",
       scrub: 1,
       pin: true,
