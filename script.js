@@ -505,7 +505,7 @@ text.split("").forEach((char) => {
 let page2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "0.2%",
+    start: "1%",
     end: "90%",
     scrub: 0.8,
     pin: true,
