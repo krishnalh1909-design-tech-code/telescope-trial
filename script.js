@@ -538,56 +538,56 @@ gsap
 
 // --------------------------------------
 
-// let size;
+let size;
 
-// function createTimeline() {
-//   if (size) {
-//     size.kill(); // kill existing timeline to prevent stacking
-//   }
+function createTimeline() {
+  if (size) {
+    size.kill(); // kill existing timeline to prevent stacking
+  }
 
-//   size = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".main",
-//       start: "0.3%",
-//       end: "100%",
-//       scrub: 1,
-//       pin: true,
-//     },
-//   });
+  size = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".main",
+      start: "0.3%",
+      end: "100%",
+      scrub: 1,
+      pin: true,
+    },
+  });
 
-//   if (window.innerWidth > 1000) {
-//    size.fromTo(
-//       ".slider1",
-//       { top: "100%" },
-//       {
-//         top: "-100%",
-//         // ease: "sine.inOut",
-//       }
-//     );
-//   } else {
-//     size.fromTo(
-//       ".slider1",
-//       { right: "-110%" },
-//       {
-//         right: "70%",
-//         // ease: "sine.inOut",
-//       }
-//     );
-//   }
-// }
+  if (window.innerWidth > 1000) {
+   size.fromTo(
+      ".slider1",
+      { y:700 },
+      {y:-700
+        ,
+        // ease: "sine.inOut",
+      }
+    );
+  } else {
+    size.fromTo(
+      ".slider1",
+      { x:700},
+      {
+        x:-700,
+        // ease: "sine.inOut",
+      }
+    );
+  }
+}
 
 // // Create timeline initially
-// createTimeline();
+createTimeline();
 
-// // Recreate timeline on resize with debounce
-// let resizeTimeout;
-// window.addEventListener("resize", () => {
-//   clearTimeout(resizeTimeout);
-//   resizeTimeout = setTimeout(() => {
-//     createTimeline();
-//     ScrollTrigger.refresh(); // Refresh ScrollTrigger to update positions
-//   }, 200); // adjust delay as needed
-// });
+// Recreate timeline on resize with debounce
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    createTimeline();
+    ScrollTrigger.refresh(); // Refresh ScrollTrigger to update positions
+  }, 200); // adjust delay as needed
+});
 
 // const shops = gsap.timeline({
 //   scrollTrigger: {
@@ -609,5 +609,3 @@ gsap
 //     "a"
 //   )
 
-
-// Note page2-part1 padding
