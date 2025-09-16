@@ -502,43 +502,38 @@ text.split("").forEach((char) => {
   heading.appendChild(span);
 });
 
-
 let page2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".main",
-      start: "0.2%",
-      end: "90%",
-      scrub: 0.8,
-      pin: true,
-    },
-  })
+  scrollTrigger: {
+    trigger: ".main",
+    start: "0.2%",
+    end: "90%",
+    scrub: 0.8,
+    pin: true,
+  },
+});
 
+page2.to(".page2", {
+  bottom: "0%",
+  left: "0%",
+  ease: "sine.inOut",
+});
 
-  page2.to(".page2", {
-    bottom: "0%",
-    left: "0%",
-    ease: "sine.inOut",
-  });
+let letter = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main",
+    start: "0.3%",
+    end: "100%",
+    scrub: 1,
+    pin: true,
+    // markers: true,
+  },
+});
 
-
-
-let letter = gsap .timeline({
-    scrollTrigger: {
-      trigger: ".main",
-      start: "0.3%",
-      end: "100%",
-      scrub: 1,
-      pin: true,
-      // markers: true,
-    },
-  })
-
-  letter.to(".letter", {
-    color: "black",
-    stagger: 0.07,
-    ease: "power1.inOut",
-  });
-
+letter.to(".letter", {
+  color: "black",
+  stagger: 0.07,
+  ease: "power1.inOut",
+});
 
 // --------------------------------------
 
@@ -560,21 +555,21 @@ function createTimeline() {
   });
 
   if (window.innerWidth > 1000) {
-   size.fromTo(
-      ".slider1",
-      { y:900 },
-      {y:-900
-        ,
-        // ease: "sine.inOut",
+    size.fromTo(
+      ".page2-part2",
+      { top: "80%" },
+      {
+        top: "-100%",
+        ease: "sine.inOut",
       }
     );
   } else {
     size.fromTo(
-      ".slider1",
-      { x:900},
+      ".page2-part2",
+      { right: "-110%" },
       {
-        x:-900,
-        // ease: "sine.inOut",
+        right: "140%",
+        ease: "sine.inOut",
       }
     );
   }
@@ -592,5 +587,3 @@ window.addEventListener("resize", () => {
     ScrollTrigger.refresh(); // Refresh ScrollTrigger to update positions
   }, 200); // adjust delay as needed
 });
-
-
