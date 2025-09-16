@@ -1,7 +1,7 @@
 (function () {
   // Check if width is inside the 600-1024 range (inclusive)
   function isInRange(width) {
-    return width >= 200 && width <= 600 && width <1000;
+    return width >= 200 && width <= 600 && width < 1000;
   }
 
   let wasInRange = isInRange(window.innerWidth);
@@ -495,7 +495,7 @@ updateSlide();
 const page2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "0.1%",
+    start: "1%",
     end: "100%",
     scrub: 2,
     pin: true,
@@ -523,7 +523,7 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".main",
-      start: "1%",
+      start: "0.2%",
       end: "100%",
       scrub: 1,
       pin: true,
@@ -558,8 +558,8 @@ function createTimeline() {
   if (window.innerWidth > 1000) {
    size.fromTo(
       ".slider1",
-      { y:700 },
-      {y:-700
+      { y:900 },
+      {y:-900
         ,
         // ease: "sine.inOut",
       }
@@ -567,9 +567,9 @@ function createTimeline() {
   } else {
     size.fromTo(
       ".slider1",
-      { x:700},
+      { x:900},
       {
-        x:-700,
+        x:-900,
         // ease: "sine.inOut",
       }
     );
@@ -589,23 +589,21 @@ window.addEventListener("resize", () => {
   }, 200); // adjust delay as needed
 });
 
-// const shops = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".main",
-//     start: "2%",
-//     end: "200%",
-//     scrub: 1,
-//     pin: true,
-//     markers: true,
-//   },
-// });
+const shops = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main",
+    start: "0.5%",
+    end: "100%",
+    scrub: 1,
+    pin: true,
+  },
+});
 
-// shops
-//   .to(
-//     ".shops",
-//     {
-//       top: "-250%",
-//     },
-//     "a"
-//   )
+shops
+  .to(
+    ".shops",
+    {
+      top: "0%",
+    },
+  )
 
