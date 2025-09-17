@@ -1110,8 +1110,179 @@ form button:hover {
   left: 0;
   height: 240vh;
   width: 100%;
-  background-color: #3970c2;
+  background-color: #F4F3F0;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  /* padding: 1vw; */
+}
+
+.shop-heading {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4F3F0;
+}
+
+.shop-heading h4 {
+  font-weight: 100;
+}
+
+.shop-heading h1 {
+  font-size: 3.5vw;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.shop-heading h3 {
+  color: rgb(170, 168, 168);
+  font-size: 1vw;
+}
+
+@media (max-width: 800px) {
+  .shop-heading h4 {
+    font-size: 9vw;
+  }
+
+  .shop-heading h1 {
+    font-size: 10vw;
+  }
+
+  .shop-heading h3 {
+    font-size: 3.9vw;
+  }
+}
+
+/* --------------------------- */
+
+.shop-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ------------------------------------------------------- */
+.shop {
+  width: 25%;
+  height: 100%;
+}
+
+.shop h1,
+.shop h4 {
+  font-weight: 100;
+}
+
+/* ------------------------------------------------------------ */
+
+.shop1-item {
+  height: 65vh;
+  width: 100%;
   padding: 1vw;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.shop1-item-img {
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.shop1-item-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------- */
+
+.shop2-item {
+  height: 60vh;
+  width: 100%;
+  padding: 1vw;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.shop2-item-img {
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.shop2-item-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------------- */
+
+.shop3-item {
+  height: 55vh;
+  width: 100%;
+  padding: 1vw;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.shop3-item-img {
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.shop3-item-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------- */
+
+.shop4-item {
+  height: 65vh;
+  width: 100%;
+  padding: 1vw;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.shop4-item-img {
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.shop4-item-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .shop2,
+  .shop3,
+  .shop4 {
+    display: none;
+  }
+
+  .shop {
+    width: 100%;
+  }
+
+  .shop h1 {
+    font-size: 6vw;
+  }
+  .shop h4 {
+    font-size: 4.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .shop {
+    width: 100%;
+  }
 }
