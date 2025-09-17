@@ -521,7 +521,7 @@ page2.to(".page2", {
 let letter = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "0.2%",
+    start: "1.2%",
     end: "100%",
     scrub: 1,
     pin: true,
@@ -549,7 +549,7 @@ function createTimeline() {
   size = gsap.timeline({
     scrollTrigger: {
       trigger: ".main",
-      start: "0.3%",
+      start: "1.3%",
       end: "100%",
       scrub: 1,
       pin: true,
