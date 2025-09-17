@@ -589,3 +589,32 @@ window.addEventListener("resize", () => {
     ScrollTrigger.refresh(); // Refresh ScrollTrigger to update positions
   }, 200); // adjust delay as needed
 });
+
+// -------------------------
+
+const shops = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main",
+    start: "0.8%",
+    end: "200%",
+    scrub: 1,
+    pin: true,
+    // markers: true,
+  },
+});
+
+shops
+  .to(
+    ".page2-part2",
+    {
+      opacity: 0,
+    },
+    "a"
+  )
+  .to(
+    ".shops",
+    {
+      top: "-120%",
+    },
+    "a"
+  )

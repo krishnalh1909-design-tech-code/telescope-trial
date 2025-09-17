@@ -1103,3 +1103,15 @@ form button:hover {
 }
 
 /* -------------------------------- */
+
+.shops {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 240vh;
+  width: 100%;
+  background-color: #3970c2;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1vw;
+}
