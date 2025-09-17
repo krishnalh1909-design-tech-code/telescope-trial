@@ -608,13 +608,11 @@ shops
     ".page2-part2",
     {
       opacity: 0,
-    },
-    "a"
+    }  
   )
   .to(
     ".shops",
     {
-      top: "-120%",
-    },
-    "a"
+      top: "-135%",
+    }
   )
