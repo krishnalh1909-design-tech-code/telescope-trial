@@ -322,7 +322,7 @@ form button:hover {
 /* -------------------------------------------------------------- */
 
 .main {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   z-index: 95;
   opacity: 0;

@@ -300,8 +300,8 @@ setTimeout(() => {
     tl.to(
       element,
       {
-        x: x * 2,
-        y: y * 2,
+        x: x * 5,
+        y: y * 5,
         scale: 1.5,
         ease: "sine.inOut",
       },
@@ -505,7 +505,7 @@ text.split("").forEach((char) => {
 let page2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "1.1%",
+    start: "0.1%",
     end: "100%",
     scrub: 0.8,
     pin: true,
@@ -521,7 +521,7 @@ page2.to(".page2", {
 let letter = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "1.2%",
+    start: "0.2%",
     end: "100%",
     scrub: 1,
     pin: true,
@@ -549,33 +549,32 @@ function createTimeline() {
   size = gsap.timeline({
     scrollTrigger: {
       trigger: ".main",
-      start: "1.3%",
+      start: "0.3%",
       end: "100%",
       scrub: 1,
       pin: true,
-      markers:true
     },
   });
 
-  if (window.innerWidth > 1000) {
-    size.fromTo(
-      ".slider1",
-      { y:900 },
-      {
-        y:-900,
-        ease: "sine.inOut",
-      }
-    );
-  } else {
-    size.fromTo(
-      ".slider1",
-      { x:700 },
-      {
-        x:-700,
-        ease: "sine.inOut",
-      }
-    );
-  }
+if (window.innerWidth > 1000) {
+  size.fromTo(
+    ".page2-part2",
+    { top: "200%" },
+    {
+      top: "-100%",
+      ease: "sine.inOut",
+    }
+  );
+} else {
+  size.fromTo(
+    ".page2-part2",
+    { right: "-100%" },
+    {
+      right: "100%",
+      ease: "sine.inOut",
+    }
+  );
+}
 }
 
 // Create timeline initially
@@ -590,6 +589,3 @@ window.addEventListener("resize", () => {
     ScrollTrigger.refresh(); // Refresh ScrollTrigger to update positions
   }, 200); // adjust delay as needed
 });
-
-
-
