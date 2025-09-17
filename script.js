@@ -595,7 +595,7 @@ window.addEventListener("resize", () => {
 const shops = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "0.7%",
+    start: "1%",
     end: "200%",
     scrub: 1,
     pin: true,
@@ -603,14 +603,7 @@ const shops = gsap.timeline({
   },
 });
 
-shops
-  .to(
-    ".page2-part2",
-    {
-      opacity: 0,
-    }  
-  )
-  .to(
+shops.to(
     ".shops",
     {
       top: "-135%",
