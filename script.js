@@ -32,21 +32,6 @@ window.addEventListener("load", () => {
 });
 // ---------------------------------------------------
 
-// ✅ Lenis Setup (Smooth Scroll)
-const lenis = new Lenis({
-  duration: 0.8,
-  easing: (t) => 1 - Math.pow(1 - t, 3), // cubic ease-out
-  smooth: true,
-});
-
-lenis.on("scroll", ScrollTrigger.update);
-
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
-
 const signinBtn = document.querySelector(".nav2 h1");
 const signinCloseBtn = document.querySelector(".signin-close-btn");
 
@@ -290,7 +275,7 @@ setTimeout(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".page1",
-      start: "top top",
+      start: "0%",
       end: "bottom top",
       scrub: 0.5,
     },
@@ -328,7 +313,7 @@ gsap
 const tl1 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "top top",
+    start: "0%",
     end: "200%",
     scrub: 1,
     pin: true,
@@ -505,7 +490,7 @@ text.split("").forEach((char) => {
 let page2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "1%",
+    start: "0.1%",
     end: "90%",
     scrub: 0.8,
     pin: true,
@@ -521,7 +506,7 @@ page2.to(".page2", {
 let letter = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "1.1%",
+    start: "0.3%",
     end: "100%",
     scrub: 1,
     pin: true,
@@ -535,7 +520,7 @@ letter.to(".letter", {
   ease: "power1.inOut",
 });
 
-// --------------------------------------
+// // --------------------------------------
 
 let size;
 
@@ -547,7 +532,7 @@ function createTimeline() {
   size = gsap.timeline({
     scrollTrigger: {
       trigger: ".main",
-      start: "1.2%",
+      start: "0.5%",
       end: "100%",
       scrub: 1,
       pin: true,
@@ -588,3 +573,31 @@ window.addEventListener("resize", () => {
   }, 200); // adjust delay as needed
 });
 
+// ----------------
+
+const shops = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main",
+    start: "0.6%",
+    end: "200%",
+    scrub: 1,
+    pin: true,
+    // markers: true,
+  },
+});
+
+shops
+  .to(
+    ".page2-part2",
+    {
+      opacity: 0,
+    },
+    "a"
+  )
+  .to(
+    ".shops",
+    {
+      top: "0%",
+    },
+    "a"
+  )
