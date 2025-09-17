@@ -19,9 +19,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-}
-
-body{
   overflow-x: hidden;
 }
 
@@ -325,11 +322,10 @@ form button:hover {
 /* -------------------------------------------------------------- */
 
 .main {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   z-index: 95;
   opacity: 0;
-  
 }
 
 /* -------------------------------------------------- */
@@ -1004,7 +1000,7 @@ form button:hover {
 }
 
 /* ----------------------------------------- */
- 
+
 .page2 {
   height: 101vh;
   width: 100%;
@@ -1106,16 +1102,4 @@ form button:hover {
   }
 }
 
-/* ----------------------- */
-
-.shops {
-  position: absolute;
-  top: 120%;
-  left: 0;
-  min-height: 120vh;
-  width: 100%;
-  background-color: #f4f3f0;
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 1vw;
-}
+/* -------------------------------- */

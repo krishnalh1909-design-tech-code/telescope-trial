@@ -32,6 +32,21 @@ window.addEventListener("load", () => {
 });
 // ---------------------------------------------------
 
+// ✅ Lenis Setup (Smooth Scroll)
+const lenis = new Lenis({
+  duration: 0.8,
+  easing: (t) => 1 - Math.pow(1 - t, 3), // cubic ease-out
+  smooth: true,
+});
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
+
 const signinBtn = document.querySelector(".nav2 h1");
 const signinCloseBtn = document.querySelector(".signin-close-btn");
 
@@ -275,7 +290,7 @@ setTimeout(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".page1",
-      start: "0%",
+      start: "top top",
       end: "bottom top",
       scrub: 0.5,
     },
@@ -313,7 +328,7 @@ gsap
 const tl1 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "0%",
+    start: "top top",
     end: "200%",
     scrub: 1,
     pin: true,
@@ -490,8 +505,8 @@ text.split("").forEach((char) => {
 let page2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "0.1%",
-    end: "90%",
+    start: "1%",
+    end: "100%",
     scrub: 0.8,
     pin: true,
   },
@@ -506,7 +521,7 @@ page2.to(".page2", {
 let letter = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "0.3%",
+    start: "0.2%",
     end: "100%",
     scrub: 1,
     pin: true,
@@ -520,8 +535,10 @@ letter.to(".letter", {
   ease: "power1.inOut",
 });
 
-// // --------------------------------------
+// --------------------------------------
 
+
+// ✅ Page2-Part2 Upward Scroll
 let size;
 
 function createTimeline() {
@@ -532,35 +549,36 @@ function createTimeline() {
   size = gsap.timeline({
     scrollTrigger: {
       trigger: ".main",
-      start: "0.5%",
+      start: "0.3%",
       end: "100%",
       scrub: 1,
       pin: true,
+      markers:true
     },
   });
 
   if (window.innerWidth > 1000) {
     size.fromTo(
-      ".page2-part2",
-      { top: "80%" },
+      ".slider1",
+      { y:900 },
       {
-        top: "-100%",
+        y:-900,
         ease: "sine.inOut",
       }
     );
   } else {
     size.fromTo(
-      ".page2-part2",
-      { right: "-110%" },
+      ".slider1",
+      { x:700 },
       {
-        right: "140%",
+        x:-700,
         ease: "sine.inOut",
       }
     );
   }
 }
 
-// // Create timeline initially
+// Create timeline initially
 createTimeline();
 
 // Recreate timeline on resize with debounce
@@ -573,31 +591,5 @@ window.addEventListener("resize", () => {
   }, 200); // adjust delay as needed
 });
 
-// ----------------
 
-const shops = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".main",
-    start: "0.6%",
-    end: "200%",
-    scrub: 1,
-    pin: true,
-    // markers: true,
-  },
-});
 
-shops
-  .to(
-    ".page2-part2",
-    {
-      opacity: 0,
-    },
-    "a"
-  )
-  .to(
-    ".shops",
-    {
-      top: "0%",
-    },
-    "a"
-  )
