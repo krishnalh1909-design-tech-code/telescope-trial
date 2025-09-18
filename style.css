@@ -322,7 +322,6 @@ form button:hover {
 /* -------------------------------------------------------------- */
 
 .main {
-  height: 100vh;
   width: 100%;
   z-index: 95;
   opacity: 0;
@@ -1159,7 +1158,7 @@ form button:hover {
 
 .shop-wrapper {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 135vh;
   display: flex;
 }
 
@@ -1284,5 +1283,71 @@ form button:hover {
 @media (max-width: 600px) {
   .shop {
     width: 100%;
+  }
+}
+
+/* ------------------------ */
+
+
+.clip-page {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: red; */
+}
+
+.curate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 87vh;
+  width: 100%;
+  background-color: #e3f794;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  clip-path: polygon(100% 0, 100% 30%, 100% 50%, 100% 100%, 0 64%, 0 30%);
+}
+
+.your {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
+  background-color: #f4f3f0;
+  position: absolute;
+  top: 91%;
+  left: 0;
+  clip-path: polygon(0 0, 100% 33%, 100% 71%, 0 100%, 0% 50%);
+}
+
+.taste {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 87vh;
+  width: 100%;
+  background-color: #e3f794;
+  position: absolute;
+  top: 117%;
+  left: 0;
+  clip-path: polygon(100% 0, 100% 30%, 100% 50%, 100% 100%, 0 64%, 0 30%);
+}
+
+.curate h1,
+.your h1,
+.taste h1 {
+  font-size: 15vw;
+  font-family: Beauty2;
+  font-weight: 200;
+}
+
+@media (max-width: 800px) {
+  .curate h1,
+  .your h1,
+  .taste h1 {
+    font-size: 100px;
+    /* font-family: Beauty2; */
+    font-weight: 200;
   }
 }
