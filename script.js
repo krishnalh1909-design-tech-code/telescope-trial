@@ -595,7 +595,7 @@ window.addEventListener("resize", () => {
 const shops = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",
-    start: "1%",
+    start: "0.8%",
     end: "200%",
     scrub: 1,
     pin: true,
@@ -606,10 +606,29 @@ const shops = gsap.timeline({
 shops.to(
     ".shops",
     {
-      top: "-264%",
+      top: "0%",
     }
   )
-  .from(
+
+const shop = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main",
+    start: "1%",
+    end: "200%",
+    scrub: 1,
+    pin: true,
+    // markers: true,
+  },
+});
+
+
+   shop.to(".shop-heading",{
+    y:-1500
+   },"a")
+   .to(".shop-wrapper",{
+    y:-1500
+   },"a")
+   .from(
     ".curate1",
     {
       x: 1500,
