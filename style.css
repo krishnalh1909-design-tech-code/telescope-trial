@@ -1176,7 +1176,7 @@ form button:hover {
 /* ------------------------------------------------------------ */
 
 .shop1-item {
-  min-height: 65vh;
+  min-height: 135vh;
   width: 100%;
   padding: 1vw;
   overflow: hidden;
@@ -1292,7 +1292,7 @@ form button:hover {
 .clip-page {
   width: 100%;
   min-height: 100vh;
-  /* background-color: red; */
+  background-color: white
 }
 
 .curate {
