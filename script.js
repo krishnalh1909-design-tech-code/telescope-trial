@@ -558,19 +558,19 @@ function createTimeline() {
 
 if (window.innerWidth > 1000) {
   size.fromTo(
-    ".page2-part2",
-    { top: "200%" },
+    ".slider1",
+    { y:900 },
     {
-      top: "-150%",
+      y:-900,
       ease: "sine.inOut",
     }
   );
 } else {
   size.fromTo(
-    ".page2-part2",
-    { right: "-100%" },
+    ".slider",
+    {x:800 },
     {
-      right: "120%",
+      x:-800,
       ease: "sine.inOut",
     }
   );
@@ -661,8 +661,6 @@ shops.to(
 
   // ------------
 
-
-  
 const page3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".main",

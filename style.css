@@ -1576,18 +1576,15 @@ form button:hover {
 }
 
 .h1-list h1 {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
   font-weight: 100;
   font-family: Beauty2;
-  font-size: 3.5vw;
+  font-size: 55px;
   color: #f3f3f3;
 }
 
 @media (max-width: 1000px) {
-  /* .h1-list {
-    width: 100%;
-    left: 3%;
-  } */
+  
 
   .h1-list h1 {
     margin-bottom: 80px;
