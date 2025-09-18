@@ -555,17 +555,6 @@ function createTimeline() {
     },
   });
 
-  shops = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".main",
-      start: "1%",
-      end: "200%",
-      scrub: 1,
-      pin: true,
-      // markers: true,
-    },
-  });
-
   if (window.innerWidth > 1000) {
     size.fromTo(
       ".page2-part2",
@@ -575,67 +564,6 @@ function createTimeline() {
         ease: "sine.inOut",
       }
     );
-
-    shops
-      .to(".shops", {
-        top: "-264%",
-      })
-      .from(
-        ".curate1",
-        {
-          x: 1500,
-          y: 0,
-        },
-        "b-=0.69"
-      )
-      .from(
-        ".curate2,.curate4,.curate6",
-        {
-          x: 1500,
-          y: -1500,
-        },
-        "c-=0.69"
-      )
-      .from(
-        ".curate3,.curate5",
-        {
-          x: 1500,
-          y: 1500,
-        },
-        "d-=0.69"
-      )
-      .from(
-        ".your1,.your3",
-        {
-          x: 1500,
-          y: -1500,
-        },
-        "e-=0.6"
-      )
-      .from(
-        ".your2,.your4",
-        {
-          x: 1500,
-          y: 1500,
-        },
-        "e-=0.6"
-      )
-      .from(
-        ".taste1,.taste3,.taste5",
-        {
-          x: 1500,
-          y: -1500,
-        },
-        "f-=0.5"
-      )
-      .from(
-        ".taste2,.taste4",
-        {
-          x: 1500,
-          y: 1500,
-        },
-        "f-=0.5"
-      );
   } else {
     size.fromTo(
       ".page2-part2",
@@ -645,67 +573,6 @@ function createTimeline() {
         ease: "sine.inOut",
       }
     );
-
-    shops
-      .to(".shops", {
-        top: "-264%",
-      })
-      .from(
-        ".curate1",
-        {
-          x: 1500,
-          y: 0,
-        },
-        "b-=0.69"
-      )
-      .from(
-        ".curate2,.curate4,.curate6",
-        {
-          x: 1500,
-          y: -1500,
-        },
-        "c-=0.69"
-      )
-      .from(
-        ".curate3,.curate5",
-        {
-          x: 1500,
-          y: 1500,
-        },
-        "d-=0.69"
-      )
-      .from(
-        ".your1,.your3",
-        {
-          x: 1500,
-          y: -1500,
-        },
-        "e-=0.6"
-      )
-      .from(
-        ".your2,.your4",
-        {
-          x: 1500,
-          y: 1500,
-        },
-        "e-=0.6"
-      )
-      .from(
-        ".taste1,.taste3,.taste5",
-        {
-          x: 1500,
-          y: -1500,
-        },
-        "f-=0.5"
-      )
-      .from(
-        ".taste2,.taste4",
-        {
-          x: 1500,
-          y: 1500,
-        },
-        "f-=0.5"
-      );
   }
 }
 
@@ -723,3 +590,163 @@ window.addEventListener("resize", () => {
 });
 
 // -------------------------
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// MatchMedia: different timelines for desktop and mobile
+ScrollTrigger.matchMedia({
+  // ✅ Desktop (min-width: 768px)
+  "(min-width: 768px)": function () {
+    const shops = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".main",
+        start: "1%",
+        end: "200%",
+        scrub: 1,
+        pin: true,
+        // markers: true, // Enable for debugging
+      },
+    });
+
+    shops
+      .to(".shops", {
+        top: "-264%",
+      })
+      .from(
+        ".curate1",
+        {
+          x: "90vw",
+          y: "10vw",
+        },
+        "b-=0.69"
+      )
+      .from(
+        ".curate2, .curate4, .curate6",
+        {
+          x: "90vw",
+          y: "-90vh",
+        },
+        "c-=0.69"
+      )
+      .from(
+        ".curate3, .curate5",
+        {
+          x: "90vw",
+          y: "90vh",
+        },
+        "d-=0.69"
+      )
+      .from(
+        ".your1, .your3",
+        {
+          x: "90vw",
+          y: "-90vh",
+        },
+        "e-=0.6"
+      )
+      .from(
+        ".your2, .your4",
+        {
+          x: "90vw",
+          y: "900vh",
+        },
+        "e-=0.6"
+      )
+      .from(
+        ".taste1, .taste3, .taste5",
+        {
+          x: "90vw",
+          y: "-900vh",
+        },
+        "f-=0.5"
+      )
+      .from(
+        ".taste2, .taste4",
+        {
+          x: "90vw",
+          y: "90vh",
+        },
+        "f-=0.5"
+      );
+  },
+
+  // ✅ Mobile (max-width: 767px)
+  "(max-width: 767px)": function () {
+    const shops = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".main",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+        pin: false, // Disable pinning on mobile
+        // markers: true, // Enable for debugging
+      },
+    });
+
+    shops
+      .to(".shops", {
+        top: "-100%", // Reduced movement for mobile
+      })
+      .from(
+        ".curate1",
+        {
+          x: "100vw",
+          y: 0,
+        },
+        "b-=0.69"
+      )
+      .from(
+        ".curate2, .curate4, .curate6",
+        {
+          x: "100vw",
+          y: "-100vh",
+        },
+        "c-=0.69"
+      )
+      .from(
+        ".curate3, .curate5",
+        {
+          x: "100vw",
+          y: "100vh",
+        },
+        "d-=0.69"
+      )
+      .from(
+        ".your1, .your3",
+        {
+          x: "100vw",
+          y: "-100vh",
+        },
+        "e-=0.6"
+      )
+      .from(
+        ".your2, .your4",
+        {
+          x: "100vw",
+          y: "100vh",
+        },
+        "e-=0.6"
+      )
+      .from(
+        ".taste1, .taste3, .taste5",
+        {
+          x: "100vw",
+          y: "-100vh",
+        },
+        "f-=0.5"
+      )
+      .from(
+        ".taste2, .taste4",
+        {
+          x: "100vw",
+          y: "100vh",
+        },
+        "f-=0.5"
+      );
+  },
+});
+
+// ✅ Refresh ScrollTrigger on resize
+window.addEventListener("resize", () => {
+  ScrollTrigger.refresh();
+});
