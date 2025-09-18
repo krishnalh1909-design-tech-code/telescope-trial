@@ -567,8 +567,8 @@ if (window.innerWidth > 1000) {
   );
 } else {
   size.fromTo(
-    ".slider",
-    {x:800 },
+    ".slider1",
+    { x:800 },
     {
       x:-800,
       ease: "sine.inOut",
@@ -808,7 +808,7 @@ tlNew
     },
     {
       y: -3500,
-      stagger: 0.035,
+      stagger: 0.040,
     },
     "-=1.4"
   )
