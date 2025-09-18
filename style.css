@@ -1176,7 +1176,7 @@ form button:hover {
 /* ------------------------------------------------------------ */
 
 .shop1-item {
-  height: 65vh;
+  min-height: 65vh;
   width: 100%;
   padding: 1vw;
   overflow: hidden;
